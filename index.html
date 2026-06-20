@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FIFA World Cup 2026 Knockout Bracket</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section id="bracket-capture" class="bracket-board" aria-label="FIFA World Cup 2026 knockout bracket">
+        <div class="stadium-grid"></div>
+        <div class="board-content">
+          <header class="board-header">
+            <h1>World Champions</h1>
+          </header>
+
+          <section class="bracket-layout">
+            <aside id="left-groups" class="groups-column" aria-label="Groups A to F"></aside>
+            <section id="left-wing" class="bracket-wing left-wing" aria-label="Left knockout bracket"></section>
+
+            <section class="center-stage" aria-label="Final stage">
+              <div id="champion-slot" class="final-top"></div>
+              <img class="trophy-image" src="./images/trophy.png" alt="FIFA World Cup trophy" />
+              <div class="final-row">
+                <div id="final-left-slot"></div>
+                <div id="final-right-slot"></div>
+              </div>
+              <div class="third-place">
+                <div class="third-title">Third Place</div>
+                <div class="third-grid">
+                  <div id="third-left-slot"></div>
+                  <div id="third-right-slot"></div>
+                </div>
+              </div>
+            </section>
+
+            <section id="right-wing" class="bracket-wing right-wing" aria-label="Right knockout bracket"></section>
+            <aside id="right-groups" class="groups-column" aria-label="Groups G to L"></aside>
+          </section>
+        </div>
+      </section>
+
+      <section class="control-panel" aria-label="Bracket controls">
+        <div class="button-row">
+          <button id="export-png" class="panel-button" type="button">Export PNG</button>
+          <button id="reset-bracket" class="panel-button" type="button">Reset Bracket</button>
+          <button id="save-json" class="panel-button" type="button">Save JSON</button>
+          <label class="panel-button load-button">
+            Load JSON
+            <input id="load-json" type="file" accept="application/json,.json" />
+          </label>
+        </div>
+
+        <label class="duplicate-toggle">
+          Allow duplicates
+          <button id="allow-duplicates" class="toggle" type="button" aria-pressed="false">
+            <span></span>
+          </button>
+        </label>
+
+        <div id="placed-count" class="placed-count">0 / 48 placed</div>
+      </section>
+
+      <section class="flag-bank-panel" aria-label="Country flag bank">
+        <div class="flag-bank-heading">
+          <div>
+            <h2>Country Flag Bank</h2>
+            <p>Drag a country into any bracket slot. Used countries fade by default.</p>
+          </div>
+          <div id="bank-count" class="placed-count">0 / 48 placed</div>
+        </div>
+        <div id="flag-bank" class="flag-bank"></div>
+      </section>
+    </main>
+  </body>
+</html>
