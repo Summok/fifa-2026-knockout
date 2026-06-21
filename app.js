@@ -45,9 +45,9 @@ const groupData = {
   ],
   E: [
     ["Germany", "GER", "de"],
-    ["Mali", "MLI", "ml"],
-    ["Ireland", "IRL", "ie"],
-    ["Ecuador", "ECU", "ec"]
+    ["Ivory Coast", "CIV", "ci"],
+    ["Ecuador", "ECU", "ec"],
+    ["Curacao", "CUW", "cw"]
   ],
   F: [
     ["Netherlands", "NED", "nl"],
