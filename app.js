@@ -260,7 +260,7 @@ function makeFlagImage(team, className) {
 }
 
 function makeBracketSlot(slotId, options = {}) {
-  const { label = "", cellCount = 2, compact = false, featured = false, vertical = false } = options;
+  const { label = "", cellCount = 2, compact = false, featured = false } = options;
   const shell = document.createElement("div");
   shell.className = "slot-shell";
 
@@ -272,7 +272,7 @@ function makeBracketSlot(slotId, options = {}) {
   }
 
   const grid = document.createElement("div");
-  grid.className = `slot-grid${cellCount === 1 ? " single" : ""}${vertical ? " vertical" : ""}`;
+  grid.className = `slot-grid${cellCount === 1 ? " single" : ""}`;
   shell.append(grid);
 
   for (let index = 1; index <= cellCount; index += 1) {
@@ -399,8 +399,11 @@ function renderCenterStage() {
   document.getElementById("final-right-slot").replaceChildren(
     makeBracketSlot("final-right", { cellCount: 1, compact: true })
   );
-  document.getElementById("third-match-slot").replaceChildren(
-    makeBracketSlot("third-left", { cellCount: 2, vertical: true })
+  document.getElementById("third-left-slot").replaceChildren(
+    makeBracketSlot("third-left", { cellCount: 2, compact: true })
+  );
+  document.getElementById("third-right-slot").replaceChildren(
+    makeBracketSlot("third-right", { cellCount: 2, compact: true })
   );
 }
 

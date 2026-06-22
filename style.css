@@ -82,7 +82,7 @@ input {
 
 .bracket-layout {
   display: grid;
-  grid-template-columns: 160px 596px 300px 596px 160px;
+  grid-template-columns: 160px 530px 360px 530px 160px;
   gap: 12px;
 }
 
@@ -137,7 +137,7 @@ input {
 
 .bracket-wing {
   display: grid;
-  grid-template-columns: repeat(4, 140px);
+  grid-template-columns: 150px 122px 122px 122px;
   min-height: 760px;
   align-items: stretch;
   column-gap: 12px;
@@ -217,7 +217,6 @@ input {
 .slot-shell {
   position: relative;
   z-index: 2;
-  width: max-content;
   min-width: 0;
   border: 2px solid rgba(255, 255, 255, 0.82);
   border-radius: 8px;
@@ -240,26 +239,18 @@ input {
 
 .slot-grid {
   display: grid;
-  grid-template-columns: repeat(2, 56px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
-  justify-content: center;
 }
 
 .slot-grid.single {
-  grid-template-columns: 56px;
-}
-
-.slot-grid.vertical {
-  grid-template-columns: 56px;
-  grid-auto-rows: 40px;
+  grid-template-columns: 1fr;
 }
 
 .slot-cell {
   position: relative;
   display: grid;
-  width: 56px;
   height: 40px;
-  flex: 0 0 56px;
   place-items: center;
   border: 1px dashed rgba(255, 255, 255, 0.5);
   border-radius: 4px;
@@ -269,8 +260,7 @@ input {
 }
 
 .slot-cell.compact {
-  width: 56px;
-  height: 40px;
+  height: 32px;
 }
 
 .slot-cell.featured {
@@ -294,13 +284,13 @@ input {
 }
 
 .slot-grid.single .slot-flag {
-  width: 44px;
-  height: 28px;
+  width: 64px;
+  height: 40px;
 }
 
 .slot-cell.compact .slot-flag {
-  width: 44px;
-  height: 28px;
+  width: 32px;
+  height: 20px;
 }
 
 .remove-flag {
@@ -349,16 +339,13 @@ input {
 
 .final-row {
   display: grid;
-  width: 154px;
+  width: 230px;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  justify-items: center;
 }
 
 .third-place {
-  display: grid;
-  width: 86px;
-  justify-items: center;
+  width: 210px;
   margin-top: 16px;
 }
 
@@ -374,8 +361,8 @@ input {
 
 .third-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
   margin-top: 8px;
 }
 
