@@ -70,8 +70,8 @@ const groupData = {
   I: [
     ["France", "FRA", "fr"],
     ["Senegal", "SEN", "sn"],
-    ["Norway", "NOR", "no"],
-    ["Puerto Rico", "PUR", "pr"]
+    ["Iraq", "IRQ", "iq"],
+    ["Norway", "NOR", "no"]
   ],
   J: [
     ["Argentina", "ARG", "ar"],
